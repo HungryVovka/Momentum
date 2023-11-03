@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/feature.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <div class="music-container" id="music-container">
+        <div class="music-info">
+          <h2 id="title" class="title"></h2>
+          <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+          </div>
+        </div>
+        <audio src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/music/summer.mp3?raw=true" id="audio"></audio>
+        <div class="img-container">
+          <img src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/images/summer.jpg?raw=true" alt="music-cover" id="cover"/>
+        </div>
+        <div class="navigation">
+          <button id="prev" class="action-btn">
+            <img src="assets\img\prev-player.jpg" alt="Back" class="fas fa-backward">
+          </button>
+          <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"><img src="assets\img\play-player.jpg" alt="Play" class="fas fa-play"></i>
+          </button>
+          <button id="next" class="action-btn">
+            <img src="assets\img\next-player.jpg" alt="Forward" class="fas fa-forward">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="weatherinfo">
+      <div class="container">
+        <div class="weather-container">
+          <div class="search-bar">
+            <input type="text" placeholder="City" id="search-input" class="inputweather">
+            <button id="search-btn" class="buttonweather">Search</button>
+          </div>
+          <div class="output-panel">
+            <div class="city-panel">
+              <div class="temperature">
+                <h1><span class="js-temp" id="city-temp"></span><span class="unit">C</span></h1>
+                <p>Temperature</p>
+              </div>
+              <div class="city">
+                <h2><span id="city-name">City Name</span></h2>
+                <p>City</p>
+              </div>
+            </div>
+          </div>
+          <div class="output-panel">
+            <div class="weather-panel">
+              <div class="humidity">
+                <h1><span id="humidity-level"></span>%</h1>
+                <p>Humidity</p>
+              </div>
+              <div class="temperatue-panel">
+                <div class="min-max-temp">
+                  <div class="temperature-box">
+                    <h2><span class="js-temp" id="min-temp"></span><span class="unit">C</span></h2>
+                    <p>Min.</p>
+                  </div>
+                  <div class="temperature-box">
+                    <h2><span class="js-temp" id="max-temp"></span><span class="unit">C</span></h2>
+                    <p>Max.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+  <time id="time"></time>
+  <h2 id="date">0000 00/00 fri</h2>
+      <h1>
+        <span id="greeting"></span>
+        <span id="name" contenteditable="true"></span>
+      </h1>
+      <h2>What Is Your Focus For Today?</h2>
+  <h2 id="focus" contenteditable="true"></h2>
+  <time id="time"></time>
+  </main>
+  <footer class="footer">
+    <div class="page container ">
+      <div class="row">
+        <div class="col s12 center ">
+          <button class="quote_button" onclick="change()">
+            <img src="assets\img\quote.jpg" alt="quote"> 
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center">
+          <div class="card_of_text">
+            <div class="card-content white-text">
+              <p id="quote">Here are few quotes which i like .Please press the Button to see the next random quote</p>
+            </div>
+            <div class="card-action">
+              <p class="white-text "id="author">This is a link</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="links">
+    <div class="page-footer">
+      <div class="copyright">
+        <p>&#xa9 2022</p>
+      </div>
+      <div class="git">
+        <a href="https://github.com/HungryVovka">HungryVovka (Vladimir Rukavishnikov)</a>
+      </div>
+    </div>
+    <div class="rs-school">
+      <a href="https://rs.school/js/">
+        <img src="https://rs.school/images/rs_school_js.svg" alt="rs-school">
+      </a>
+    </div>
+  </div>
+  <script src="js/style.js"></script>
+</body>
+</html>

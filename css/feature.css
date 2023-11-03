@@ -1,0 +1,286 @@
+/* ==========================================================================
+   HungryVovka's style
+   ========================================================================== */
+
+   
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  color: black;
+}
+
+#time {
+  font-size: 8rem;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 700px) {
+  #time {
+    font-size: 6rem;
+  }
+}
+
+/* Player */
+
+.player {
+  z-index: 100;
+  margin-top: -30px;
+}
+
+.music-container {
+  border-radius: 15px;
+  display: flex;
+  padding: 20px 30px;
+  position: relative;
+  margin: 100px 0;
+  z-index: 10;
+}
+
+.img-container {
+  position: relative;
+  width: 110px;
+  margin-top: 10px;
+}
+
+.img-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 110px;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: rotateImage 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.img-container::after {
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  bottom: 100%;
+  left: 50%;
+  height: 20px;
+  width: 20px;
+  transform: translate(-50%, 50%);
+}
+
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.action-btn {
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+  background-color: rgba(255,255,255,0.01);
+}
+
+.action-btn:focus {
+  outline: none;
+}
+
+.action-btn:hover, .action-btn.action-btn-big:hover {
+  color: #fe8daa;
+}
+
+.action-btn.action-btn-big {
+  font-size: 30px;
+}
+
+.music-info {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  top: 0;
+  left: 20px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.progress-container {
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* Weather */
+
+.weatherinfo * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 480px;
+  margin-top: 200px;
+  position: relative;
+}
+
+.weather-container {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);;
+  overflow: hidden;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.search-bar {
+    padding: 10px;
+}
+
+#search-input {
+  padding: 5px 10px;
+  width: 70%;
+  font-size: 20px;
+  height: 50px;
+  float: left;
+  display: block;
+  background: transparent;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.inputweather {
+  color: #FFF;
+}
+
+.weatherinfo button {
+  width: 30%;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  color: color: rgba(255,255,255,0.1);
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  align-content: center;
+}
+
+.btn-unit-change {
+  width: 100%;
+  border-top-right-radius: 0;
+  border-top: 1px solid #fff;
+}
+
+.output-panel {
+  padding: 10px;
+  width: 50%;
+  height: 180px;
+  float: left;
+}
+
+.temperature {
+  cursor: pointer;
+}
+
+.temperature-box {
+  width: 50%;
+  float: left;
+}
+
+.humidity,
+.temperature {
+  height: 60px;
+}
+
+.temperature,
+.city,
+.humidity,
+.min-max-temp {
+  margin: 20px 0;
+}
+
+#city-name{
+  text-transform: capitalize;
+}
+
+/* Quotes */
+
+.page{
+  padding:100px;
+  width:100%;
+  height:100%;
+}
+
+.quote_button{
+  background-color: rgba(255,255,255,0.01);
+  border-color: rgba(255,255,255,0.01);
+}
+
+.card_of_text {
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+/* That's all for now. */
